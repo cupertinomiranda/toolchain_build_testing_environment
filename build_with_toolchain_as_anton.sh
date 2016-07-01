@@ -24,10 +24,24 @@ ln -sf ${SOURCE_DIR}/linux ${WORKSPACE_DIR}/.
 cd ${WORKSPACE_DIR}/toolchain
 mkdir -p ${BUILD_DIR}
 
+OPTIONS="--no-multilib"
+if [ "${ELF_TOOLCHAIN}" = "y" ]; then
+  OPTIONS="${OPTIONS} --elf32"
+else
+  OPTIONS="${OPTIONS} --no-elf32"
+fi
+if [ "${UCLIBC_TOOLCHAIN}" = "y" ]; then
+  OPTIONS="${OPTIONS} --uclibc"
+else
+  OPTIONS="${OPTIONS} --no-uclibc"
+fi
+
+DEFAULT_ARC_VERSION=arc${ARC_VERSION}
+
 ./build-all.sh --strip --rel-rpaths --config-extra --with-python=no \
 	       --no-auto-pull --no-auto-checkout --no-native-gdb --no-optsize-newlib \
-	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 --no-elf32 \
-	       --uclibc --no-multilib --cpu ${DEFAULT_ARC_VERSION}  \
+	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 \
+	       ${OPTIONS} --cpu ${DEFAULT_ARC_VERSION}  \
 	       --build-dir ${BUILD_DIR} \
 	       --target-cflags '-O2 -g -mcpu=archs' --release-name 'tino build' \
 	       --install-dir ${INSTALL_DIR} \
