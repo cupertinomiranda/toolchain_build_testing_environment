@@ -26,5 +26,4 @@ export UCLIBC_TOOLCHAIN=y
 
 #export BUILDROOT_DEFCONFIG=snps_axs10x_defconfig
 export BUILDROOT_DEFCONFIG=snps_nsimosci_${ARC_VERSION}_defconfig
-export BUILDROOT_DEFCONFIG=snps_nsimosci_${ARC_VERSION}_defconfig
 

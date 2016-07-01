@@ -1,3 +1,16 @@
-
+Scripts to facilitate toolchain compilation,
+and testing.
 
 -- Setup environment --
+
+Change setup.sh to moremeaningfull data for your environment.
+
+Execute,
+> source setup.sh
+to set environment variables in your open shell.
+
+Build toolchain:
+> sh build_with_toolchain_as_anton.sh
+
+Build buildroot:
+> sh build_buildroot.sh
