@@ -3,7 +3,12 @@ and testing.
 
 -- Setup environment --
 
-Change setup.sh to moremeaningfull data for your environment.
+Change setup.sh to more meaningfull data for your environment.
+
+Simbolic symbols in source directory should be replaced with more meaningfull 
+ones.
+Buildroot should be pointing to branch 'toolchain_team_board_testing' from
+foss buildroot repo.
 
 Execute,
 > source setup.sh
