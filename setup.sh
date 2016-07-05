@@ -17,6 +17,8 @@ export JOBS=4
 export NSIM_HOME=/home/cmiranda/projects/nsim/r527271/nSIM_64
 export PATH=/home/cmiranda/projects/nsim/r527271/nSIM_64/bin:$PATH
 
+export TC_BOARD_SERVER_IP=nl20droid2:6969
+
 # ------------- DONT CHANGE BELOW THIS LINE -------------------
 
 export CURRENT_PATH=`pwd`
