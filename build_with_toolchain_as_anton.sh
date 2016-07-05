@@ -14,6 +14,7 @@ mkdir -p ${WORKSPACE_DIR}
 cd ${WORKSPACE_DIR}
 
 cp -aHf ${SOURCE_DIR}/toolchain ${WORKSPACE_DIR}/toolchain
+cp -aHf ${SOURCE_DIR}/verification-scripts ${WORKSPACE_DIR}/verification-scripts
 ln -sf ${SOURCE_DIR}/binutils ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/gdb ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/gcc ${WORKSPACE_DIR}/.
@@ -38,7 +39,7 @@ fi
 
 DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 
-./build-all.sh --strip --rel-rpaths --config-extra --with-python=no \
+./build-all.sh --rel-rpaths --config-extra --with-python=no \
 	       --no-auto-pull --no-auto-checkout --no-native-gdb --no-optsize-newlib \
 	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 \
 	       ${OPTIONS} --cpu ${DEFAULT_ARC_VERSION}  \
