@@ -25,6 +25,14 @@ ln -sf ${SOURCE_DIR}/linux ${WORKSPACE_DIR}/.
 cd ${WORKSPACE_DIR}/toolchain
 mkdir -p ${BUILD_DIR}
 
+TARGET_CFLAGS="-O2 -g"
+if [ "${ARC_VERSION}" = "700" ]; then
+  TARGET_CFLAGS="${TARGET_CFLAGS} -mcpu=arc700"
+fi
+if [ "${ARC_VERSION}" = "hs" ]; then
+  TARGET_CFLAGS="${TARGET_CFLAGS} -mcpu=archs"
+fi
+
 OPTIONS="--no-multilib"
 if [ "${ELF_TOOLCHAIN}" = "y" ]; then
   OPTIONS="${OPTIONS} --elf32"
@@ -44,7 +52,7 @@ DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 \
 	       ${OPTIONS} --cpu ${DEFAULT_ARC_VERSION}  \
 	       --build-dir ${BUILD_DIR} \
-	       --target-cflags '-O2 -g -mcpu=archs' --release-name 'tino build' \
+	       --target-cflags \'${TARGET_CFLAGS}\' --release-name 'tino build' \
 	       --install-dir ${INSTALL_DIR} \
 	       --no-pdf
 
