@@ -52,7 +52,7 @@ DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 \
 	       ${OPTIONS} --cpu ${DEFAULT_ARC_VERSION}  \
 	       --build-dir ${BUILD_DIR} \
-	       --target-cflags \'${TARGET_CFLAGS}\' --release-name 'tino build' \
+	       --target-cflags "${TARGET_CFLAGS}" --release-name 'tino build' \
 	       --install-dir ${INSTALL_DIR} \
 	       --no-pdf
 

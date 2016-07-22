@@ -1,7 +1,7 @@
 export TARGET=arc-default-elf32
 
-export ARC_VERSION=hs
-#export ARC_VERSION=700
+#export ARC_VERSION=hs
+export ARC_VERSION=700
 
 export ELF_TOOLCHAIN=n
 export UCLIBC_TOOLCHAIN=y
