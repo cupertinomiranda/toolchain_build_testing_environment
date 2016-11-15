@@ -15,7 +15,8 @@ Execute,
 to set environment variables in your open shell.
 
 Build toolchain:
-> sh build_with_toolchain_as_anton.sh
+> ./build_glibc_toolchain.sh
+> ./fix_glibc.sh
 
 Build buildroot:
-> sh build_buildroot.sh
+> ./build_buildroot.sh snps_nsimosci_hs_defconfig

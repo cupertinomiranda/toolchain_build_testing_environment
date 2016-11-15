@@ -1,0 +1,10 @@
+This directy should contain the following subdirectories pointing to the 
+mentioned branches.
+
+LINKNAME  |   BRANCH
+
+binutils  => (binutils_glibc-dev)
+buildroot => (glibc-arc-WIP)
+gcc_6.0   => (arc-6.x-dev)
+glibc     => (vineet-2.23)   We should rename this branch
+linux	  => (master  commit 27bcd37e0240bbe33f0efe244b5aad52104115b3)
