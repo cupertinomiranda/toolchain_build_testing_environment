@@ -4,7 +4,8 @@ export ARC_VERSION=hs
 #export ARC_VERSION=700
 
 export ELF_TOOLCHAIN=n
-export UCLIBC_TOOLCHAIN=y
+export UCLIBC_TOOLCHAIN=n
+export GLIBC_TOOLCHAIN=y
 export ENDIANESS=little #big
 
 export BUILDROOT_ENVIRONEMNT=nsimosci
