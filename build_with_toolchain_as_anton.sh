@@ -52,6 +52,7 @@ DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 	       --build-dir ${BUILD_DIR} \
 	       --target-cflags '-O2 -g -mcpu=archs' --release-name 'tino build' \
 	       --install-dir ${INSTALL_DIR} \
+	       --native-gdb \
 	       --no-pdf
 
 cd ${CURRENT_PATH}
