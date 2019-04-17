@@ -47,7 +47,7 @@ DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 
 ./build-all.sh --config-extra --with-python=no \
 	       --no-auto-pull --no-auto-checkout --no-native-gdb --no-optsize-newlib \
-	       --no-optsize-libstdc++ --no-external-download --jobs ${JOBS} --load 8 \
+	       --no-optsize-libstdc++ --no-external-download \
 	       ${OPTIONS} --cpu ${DEFAULT_ARC_VERSION}  \
 	       --build-dir ${BUILD_DIR} \
 	       --target-cflags '-O2 -g -mcpu=archs' --release-name 'tino build' \
