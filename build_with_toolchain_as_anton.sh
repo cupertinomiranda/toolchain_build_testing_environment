@@ -19,7 +19,7 @@ ln -sf ${SOURCE_DIR}/binutils ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/gdb ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/gcc ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/newlib ${WORKSPACE_DIR}/.
-ln -sf ${SOURCE_DIR}/uClibc ${WORKSPACE_DIR}/.
+ln -sf ${SOURCE_DIR}/uclibc-ng ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/linux ${WORKSPACE_DIR}/.
 ln -sf ${SOURCE_DIR}/glibc ${WORKSPACE_DIR}/.
 
