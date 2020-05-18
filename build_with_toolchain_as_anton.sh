@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/basy
 
 if [ -z "${WORKSPACE_DIR}" ]; then
   echo "You should configure setup.sh and exec 'source setup.sh'."
@@ -39,8 +39,6 @@ else
 fi
 if [ "${GLIBC_TOOLCHAIN}" = "y" ]; then
   OPTIONS="${OPTIONS} --glibc"
-else
-  OPTIONS="${OPTIONS} --no-glibc"
 fi
 
 DEFAULT_ARC_VERSION=arc${ARC_VERSION}
@@ -52,7 +50,7 @@ DEFAULT_ARC_VERSION=arc${ARC_VERSION}
 	       --build-dir ${BUILD_DIR} \
 	       --target-cflags '-O2 -g -mcpu=archs' --release-name 'tino build' \
 	       --install-dir ${INSTALL_DIR} \
-	       --native-gdb \
+	       --native \
 	       --no-pdf
 
 cd ${CURRENT_PATH}
